@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="employeeCtrl">
+<input type="text" ng-model="fistname"><br><br>
+<input type="text" ng-model="lastname"><br><br>
+ <input type="digit" ng-model="fee"><br>
+ <p> Its Full Name:<b>{{fullname()|uppercase}}</b></p>
+<p>Total Sallary :<b> {{  fee | currency }}</b></p>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('employeeCtrl', function($scope) { $scope.fee = 1000;
+$scope.fistname = ""});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <title>AngularJS Modules |AngularJS Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Include Stylesheets -->
+
+	<link href="../assets/css/bootstrap.css" rel="stylesheet">
+	<link href="../assets/css/app.css" rel="stylesheet">
+	<link href="../assets/css/animate.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+	<link href="../assets/css/prettyCheckable.css" rel="stylesheet">
+	<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.html">
+    <link rel="shortcut icon" href="assets/ico/favicon.html">
+    </head>
+    <body>
+    <!-- Start Header/Navbar  -->
+    <div  class="navbar navbar-static-top">
+        <div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="../index.html">AngularJS Tutorial</a>
+			</div><!--Container end-->
+        </div><!---/navbar iner end-->
+    </div>
+    <!-- End Header/Navbar-->
+    <!-- Start Main Content  -->
+    <div class="container">        
+		<div class="row">
+		    <div class="span3">
+				<div class="sidebar-nav">
+					<div class="base">
+						<ul class="nav nav-list">
+							<li>
+							    <a class="btn-default" href="../index.html"><h3>AngularJS Tutorial</h3></a>
+						    </li>
+							<li><a href="../index.html">AngularJS - Home</a></li>
+							<li><a href="../angularjs/angularjs-expressions.html">AngularJS - Expressions</a></li>
+							<li class="active"><a href="angularjs-modules.html">AngularJS - Modules</a></li>
+							<li><a href="../angularjs/angularjs-directives.html">AngularJS - Directives</a></li>
+							<li><a href="../angularjs/angularjs-model.html">AngularJS - Model</a></li>
+							<li><a href="../angularjs/angularjs-forms.html">AngularJS - Forms</a></li>
+						    <li><a href="../angularjs/angularjs-data-binding.html">AngularJS - Data Binding</a></li>
+							<li><a href="../angularjs/angularjs-controllers.html">AngularJS - Controllers</a></li>
+							<li><a href="../angularjs/angularjs-scopes.html">AngularJS - Scopes</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-filters.html">AngularJS - Filters</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+						</ul><!--/nav nav-list End-->
+					</div><!---/base End-->
+				</div><!-- /End  Sidebar-Nav  -->
+			</div> <!-- /End span 3  -->
+		    <!-- End Left Sidebar  -->
+		    <!-- Start Right Section  -->
+		    <div class="span9">
+			    <h2 class="page-header"><a href="angularjs-modules.html">AngularJS Modules</a></h2>
+				<div class="panel-body well text-justify" style="font-size:16px";>
+			        <p>An AngularJS module defines an application.</p>
+                    <p>The module is a container for the different parts of an application.</p>
+					<p>Modules are used to separate logics say services, controllers, application etc. and keep the code clean.</p>
+					<p>In this example we're going to create two modules.</p>
+                    <p><strong>Application Module −</strong> used to initialize an application with controller(s).</p>
+                    <p><strong>Controller Module −</strong> used to define the controller.</p>
+					<p class="lead">Creating a Module</p>
+					<p>A module is created by using the AngularJS function angular.module</p>
+					<pre style="font-size:15px";>
+&lt;div ng-app="myApp"&gt;...&lt;/div&gt;
+    &lt;script&gt;
+    var app = angular.module("myApp", []); 
+    &lt;/script&gt;
+					</pre>
+					<p>The "myApp" parameter refers to an HTML element in which the application will run.</p>										
+				    <p class="lead">Adding a Controller</p>
+					<p>Add a controller to your application, and refer to the controller with the ng-controller directive:</p>
+                    <pre style="font-size:15px";>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+{{ firstName + " has  money:- " + " " + A + " " + middleName +" has low balance:- " + " " + B + " " + lastName + " has handsome money:- " + " "+ C}}
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "DINESHWAR";
+    $scope.middleName = "KUMAR";
+     $scope.lastName = "PASWAN";
+      $scope.A = "150000";
+      $scope.B = "10000";
+      $scope.C = "110000";
+});
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+					
+					<!DOCTYPE html>					
+					<html>
+						<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+						<body>
+                        <h3 class="page-header">Output:</h3>
+						<div ng-app="myApp" ng-controller="myCtrl">
+						{{ firstName + " has  money:- " + " " + A + " " + middleName +" has low balance:- " + " " + B + " " + lastName + " has handsome money:- " + " "+ C}}
+						</div>
+
+						<script>
+						var app = angular.module("myApp", []);
+						app.controller("myCtrl", function($scope) {
+							$scope.firstName = "DINESHWAR";
+							$scope.middleName = "KUMAR";
+							 $scope.lastName = "PASWAN";
+							  $scope.A = "150000";
+							  $scope.B = "10000";
+							  $scope.C = "110000";
+						});
+						</script>
+						</body>
+					</html>
+				</div><!--/"panel-body-->
+			</div><!--Span9 End --->
+			<!--/ End Right Section  -->
+		</div><!--/row End 2---->
+        <!-- End Right Section  -->
+    </div> <!-- End Main Content -->
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12"><p>Created by Cotocus</p></div>                
+            </div><!--/row End 3-->
+        </div><!---/container End-->
+    </footer>
+    <!-- End Footer -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="../assets/js/prettyCheckable.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    
+  </body>
+
+<!-- Mirrored from wbpreview.com/previews/WB03K48SB/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Dec 2016 09:48:51 GMT -->
+</html>

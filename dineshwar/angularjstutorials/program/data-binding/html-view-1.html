@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+    <p>First Name: <strong>{{firstname}}</strong></p>
+    <p>Middle Name: <strong>{{middlename}}</strong></p>
+    <p>Last Name:<strong>{{lastname}}</strong></p>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstname = "Rinku ";
+    $scope.middlename = "Varma";
+     $scope.lastname = "Parshad";
+});
+</script>
+
+<p>You can use double braces to display content from the data model.</p>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>    
+<body>
+	    
+	<h4>Sample Application</h4>
+	<div ng-app = "" ng-init = "quantity = 6;cost = 15; student = {firstname:'Dineshwar',lastname:'paswan',rollno:'42'};rollno={sectionA:'3',sectionB:'10',sectionC:'16'};marks = [90,75,68,73,80,48,32,]">								
+	   <p>Expense on Books : Rs.{{ quantity * cost}} </p>
+	   <p>Hello {{student.firstname + " " + student.lastname}}!</p>
+		<h5>FirstName {{student.firstname}}</h5>
+		<h5>LastName {{student.lastname}}</h5>
+		<p>Roll No:- {{student.rollno}}</p>
+		<p>All section:-{{rollno.sectionA +" "+ rollno.sectionB +" "+ rollno.sectionC}}</P>
+		<p>SectionA:-{{rollno.sectionA}}</p>
+		<p>SectionB:-{{rollno.sectionB}}</p>
+		<p>SectionC:-{{rollno.sectionC}}</p>
+		<p>Marks(Math):- {{marks[4]}}</p>
+		<p>Marks(Math):- {{marks[0]}}</p>
+		<p>Marks(Math):- {{marks[2]}}</p>
+	</div>					  							  							  
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</body>
+</html> 						                          

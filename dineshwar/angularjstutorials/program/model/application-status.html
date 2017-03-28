@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<form ng-app="" name="myForm" ng-init="myText = 'rahulsinha.kumar@gmail.com'">
+
+Email:
+<input type="email" name="myAddress" ng-model="myText" required>
+<p>Edit the e-mail address, and try to change the status.</p>
+<h1 style="color:red">Status</h1>
+<p>Valid: {{myForm.myAddress.$valid}}(dineshwarpaswan3@gmail.com).</p>
+<p>Dirty: {{myForm.myAddress.$dirty}}</p>
+<p>Touched: {{myForm.myAddress.$touched}}</p>
+<p>empty: {{myForm.myAddress.$empty}}(This is no data in box)</p>
+<p>untouched: {{myForm.myAddress.$untouched}}</p>
+<p>invalid: {{myForm.myAddress.$invalid}}(DineshwarPaswan@gmail.com)</p>
+<p>ng-pending: {{myForm.myAddress.$ng-pending}}</p>
+</form>
+
+</body>
+</html>

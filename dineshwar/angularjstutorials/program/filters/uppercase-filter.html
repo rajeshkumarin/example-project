@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="studentCtrl">
+Fst Name: <input type="text" ng-model="firstName">
+<br><br>
+Mdl Name: <input type="text" ng-model="middleName">
+<br><br>
+Lst Name: <input type="text" ng-model="lastName">
+<p>The name is full:<b> {{ fullName() | uppercase }}</b></p>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []); app.controller('studentCtrl', function($scope) {
+    $scope.firstName = "Rohit",
+     $scope.middleName = "Parshad",
+    $scope.lastName = "Kushvaha",
+     $scope.fullName = function(){return $scope.firstName+" " + $scope.middleName +" "+ $scope.lastName;};
+});
+</script>
+ 
+</body>
+</html>

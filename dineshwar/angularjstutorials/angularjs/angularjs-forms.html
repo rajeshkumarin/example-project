@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <title>AngularJS Forms |AngularJS Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Include Stylesheets -->
+
+	<link href="../assets/css/bootstrap.css" rel="stylesheet">
+	<link href="../assets/css/app.css" rel="stylesheet">
+	<link href="../assets/css/animate.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+	<link href="../assets/css/prettyCheckable.css" rel="stylesheet">
+	<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.html">
+    <link rel="shortcut icon" href="assets/ico/favicon.html">
+    </head>
+    <body>
+    <!-- Start Header/Navbar  -->
+    <div  class="navbar navbar-static-top">
+        <div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="../index.html">AngularJS Tutorial</a>
+			</div><!--Container end-->
+        </div><!---/navbar iner end-->
+    </div>
+    <!-- End Header/Navbar-->
+    <!-- Start Main Content  -->
+    <div class="container">        
+		<div class="row">
+		    <div class="span3">
+				<div class="sidebar-nav">
+					<div class="base">
+						<ul class="nav nav-list">
+							<li>
+							    <a class="btn-default" href="../index.html"><h3>AngularJS Tutorial</h3></a>
+						    </li>
+							<li><a href="../index.html">AngularJS - Home</a></li>
+							<li><a href="../angularjs/angularjs-expressions.html">AngularJS - Expressions</a></li>
+							<li><a href="../angularjs/angularjs-modules.html">AngularJS - Modules</a></li>
+							<li><a href="../angularjs/angularjs-directives.html">AngularJS - Directives</a></li>
+							<li><a href="../angularjs/angularjs-model.html">AngularJS - Model</a></li>
+							<li  class="active"><a href="angularjs-forms.html">AngularJS - Forms</a></li>
+						    <li><a href="../angularjs/angularjs-data-binding.html">AngularJS - Data Binding</a></li>
+							<li><a href="../angularjs/angularjs-controllers.html">AngularJS - Controllers</a></li>
+							<li><a href="../angularjs/angularjs-scopes.html">AngularJS - Scopes</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-filters.html">AngularJS - Filters</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+						</ul><!--/nav nav-list End-->
+					</div><!---/base End-->
+				</div><!-- /End  Sidebar-Nav  -->
+			</div> <!-- /End span 3  -->
+		    <!-- End Left Sidebar  -->
+		    <!-- Start Right Section  -->
+		    <div class="span9">
+			    <h2 class="page-header"><a href="angularjs-forms.html">AngularJS Forms</a></h2>
+				<div class="panel-body text-justify well" style="font-size:16px";>
+			        <p>Forms in AngularJS provides data-binding and validation of input controls.</p>
+					<p>AngularJS enriches form filling and validation.</p>                    											     
+					<p class="lead">Input Controls</p>
+					<ul class="list-group">
+					   <li>input elements</li>
+					   <li>select elements</li>
+					   <li>button elements</li>
+					   <li>textarea elements</li>
+					</ul>
+					<p class="lead">Data-Binding</p>
+					<p>Input controls provides data-binding by using the <strong>ng-model</strong> directive.</p>
+					<p>The application does now have a property named <strong>firstname</strong>. can be referred to in a controller:</strong>                    
+					</p>
+					<pre style="font-size:15px";>
+    &lt;input type="text" ng-model="firstname"&gt;
+	                </pre>
+				    <pre style="font-size:15px";>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="formCtrl"&gt;
+  &lt;form&gt;
+    First Name:&lt;input type="text" ng-model="firstname"&gt;
+    &lt;p&gt;&lt;b&gt;It's First Name: &lt;/b&gt;&lt;span ng-bind="firstname"&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/form&gt;
+  &lt;form&gt;
+	Middle Name:&lt;input type="text" ng-model="middlename"&gt;
+	&lt;p&gt;&lt;b&gt;It's Middle Name: &lt;/b&gt;&lt;span ng-bind="middlename"&gt;&lt;/span&gt;&lt;/p&gt;
+ &lt;/form&gt;
+  &lt;form&gt;
+	Last Name:&lt;input type="text" ng-model="lastname"&gt;
+	&lt;p&gt;&lt;b&gt;It's Last Name: &lt;/b&gt;&lt;span ng-bind="lastname"&gt;&lt;/span&gt;&lt;/p&gt;
+ &lt;/form&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+    $scope.firstname = "Deepak";
+     $scope.middlename = "Kumar";
+	$scope.lastname = "Sinha";
+});
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+				    </pre> 					
+					<p class="lead">Checkbox</p>
+					<p>A checkbox has the value <b>true or false.</b> Apply the ng-model directive to a checkbox,and use its value in your application. </p>										
+					<pre style="font-size:15px";>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app=""&gt;
+  &lt;form&gt;
+    Check to show a pragraph:
+    &lt;input type="checkbox" ng-model="myVar"&gt;
+  &lt;/form&gt;
+  &lt;p ng-show="myVar"&gt;This is My Pragraph.&lt;/p&gt;
+  &lt;form&gt;
+    Check to show a pragraph:
+    &lt;input type="checkbox" ng-model="myCar"&gt;
+  &lt;/form&gt;
+  &lt;p ng-show="myCar"&gt;My Car name is hunda city.&lt;/p&gt;
+  &lt;form&gt;
+    Check to show a pragraph:
+    &lt;input type="checkbox" ng-model="myMob"&gt;
+  &lt;/form&gt;
+  &lt;p ng-show="myMob"&gt;My Mob name is nokia.&lt;/p&gt;
+  &lt;form&gt;
+    Check to show a header:
+    &lt;input type="checkbox" ng-model="myLaptop"&gt;
+  &lt;/form&gt;
+  &lt;h3 ng-show="myLaptop"&gt;My Lap name is sony.&lt;/h3&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The header's ng-show attribute is set to true when the checkbox is checked.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+					</pre>					
+					<p class="lead">Radiobuttons</p>
+					<p>Bind radio buttons to your application with the <strong>ng-model</strong> directive.</p>
+					<p>adio buttons with the same <strong>ng-model</strong> can have different values, but only the selected one will be used.</p>
+				    <pre style="font-size:15px";>
+				       &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body ng-app=""&gt;
+
+&lt;form&gt;
+  Pick a topic:
+  &lt;input type="radio" ng-model="myVar" value="dogs"&gt;Dogs
+  &lt;input type="radio" ng-model="myVar" value="tuts"&gt;Tutorials
+  &lt;input type="radio" ng-model="myVar" value="cars"&gt;Cars
+  &lt;input type="radio" ng-model="myVar" value="mobiles"&gt;Mobiles
+  &lt;input type="radio" ng-model="myVar" value="laptops"&gt;Laptops
+  &lt;input type="radio" ng-model="myVar" value="contory"&gt;Contory
+  &lt;input type="radio" ng-model="myVar" value="states"&gt;States
+  &lt;input type="radio" ng-model="myVar" value="citys"&gt;Citys
+  
+&lt;/form&gt;
+
+&lt;div ng-switch="myVar"&gt;
+  &lt;div ng-switch-when="dogs"&gt;
+     &lt;h1&gt;Dogs&lt;/h1&gt;
+     &lt;p&gt;Welcome to a world of dogs.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div ng-switch-when="tuts"&gt;
+     &lt;h1&gt;Tutorials&lt;/h1&gt;
+     &lt;p&gt;Learn from examples.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div ng-switch-when="cars"&gt;
+     &lt;h1&gt;Audi&lt;/h1&gt;
+     &lt;p&gt;Read about cars.&lt;/p&gt;  
+  &lt;/div&gt;
+  &lt;div ng-switch-when="mobiles"&gt;
+     &lt;h1&gt;Summung&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div ng-switch-when="laptops"&gt;
+     &lt;h1&gt;Apple&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div ng-switch-when="contory"&gt;
+     &lt;h1&gt;India&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div ng-switch-when="states"&gt;
+     &lt;h1&gt;Bihar&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div ng-switch-when="citys"&gt;
+     &lt;h1&gt;Ptana&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The ng-switch directive hides and shows HTML sections depending on the value of the radio buttons.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+				    </pre>
+                    <p class="lead">Selectbox</p>
+					<p>Bind select boxes to your application with the <strong>ng-model</strong> directive.</p>
+					<p>The <strong>ng-model</strong> attribute will have the value of the selected option in the selectbox.</p>
+					<p>The value of <strong>myVar</strong> will be either <strong>cse, ece, eee</strong> or <strong> mec .</strong></p>
+					<pre style="font-size:15px";>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body ng-app=""&gt;
+                    
+&lt;form&gt;
+Select a Branch of Course:
+	&lt;select ng-model="myVar"&gt;
+	    &lt;option value="cse"&gt;CSE
+	    &lt;option value="ece"&gt;ECE
+        &lt;option value="eee"&gt;EEE
+	    &lt;option value="mec"&gt;MEC						
+    &lt;/select&gt;
+&lt;/form&gt;
+
+&lt;div ng-switch="myVar"&gt;
+		&lt;div ng-switch-when="cse"&gt;
+			&lt;h1&gt;CSE&lt;/h1&gt;
+			&lt;p&gt;Read about CSE.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div ng-switch-when="ece"&gt;
+			&lt;h1&gt;ECE&lt;/h1&gt;
+			&lt;p&gt;Read about ECE.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div ng-switch-when="eee"&gt;
+			&lt;h1&gt;EEE&lt;/h1&gt;
+			&lt;p&gt;Read about EEE.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div ng-switch-when="mec"&gt;
+			&lt;h1&gt;MEC&lt;/h1&gt;
+			&lt;p&gt;Read about MEC.&lt;/p&gt;
+		&lt;/div&gt;  
+&lt;/div&gt;
+&lt;p&gt;The ng-switch directive hides and shows HTML sections depending on the value of the dropdown list.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+					<!DOCTYPE html>
+					<html>
+					<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+					<body ng-app="">
+                    <h3 class="page-header">Output:</h3>
+					<form>
+					  Select a Branch of Course:
+					  <select ng-model="myVar">
+						<option value="cse">CSE
+						<option value="ece">ECE
+						<option value="eee">EEE
+						<option value="mec">MEC					
+					  </select>
+					</form>	
+						<div ng-switch="myVar">
+						  <div ng-switch-when="cse">
+							 <h1>CSE</h1>
+							 <p>Read about CSE.</p>
+						  </div>
+						  <div ng-switch-when="ece">
+							 <h1>ECE</h1>
+							 <p>Read about ECE.</p>
+						  </div>
+						  <div ng-switch-when="eee">
+							 <h1>EEE</h1>
+							 <p>Read about EEE.</p>
+						  </div>
+						  <div ng-switch-when="mec">
+							<h1>MEC</h1>
+							<p>Read about MEC.</p>
+						  </div>  
+						</div>
+					<p>The ng-switch directive hides and shows HTML sections depending on the value of the dropdown list.</p>
+					
+					</body>
+					</html>
+					<p class="lead">Application Code</p>
+					<p>The <b>ng-app</b> directive defines the AngularJS application.</p>
+
+					<p>The <b>ng-controller</b> directive defines the application controller.
+
+					<p>The <b>ng-model</b> directive binds three input elements to the <b>user</b> object in the model.
+
+					<p>The <b>formCtrl</b> controller sets initial values to the <b>take object,</b> and defines the <b>reset()</b> method.
+
+					<p>The <b>reset()</b> method sets the <b>user</b> object equal to the <b>take</b> object.
+
+					<p>The <b>ng-click</b>directive invokes the <b>reset()</b> method, only if the button is clicked.</p>
+					<pre style="font-size:15px";>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+  &lt;form onvalidate&gt;
+    First Name:&lt;/br&gt;
+    &lt;input type="text" ng-model="user.firstName"&gt;&lt;/br&gt;
+    Last Name:&lt;/br&gt;
+    &lt;input type="text" ng-model="user.middleName"&gt;&lt;/br&gt;
+     Last Name:&lt;/br&gt;
+    &lt;input type="text" ng-model="user.lastName"&gt;
+    &lt;br&gt;&lt;br&gt;    
+    &lt;button ng-click="reset()"&gt;Reset&lt;/button&gt;
+    &lt;button ng-click="submit()"&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;p&gt;Form = {{user}}&lt;/p&gt;
+  &lt;p&gt;Receipt = {{user}}&lt;/p&gt;
+  &lt;p&gt;Get = {{user}}&lt;/p&gt;
+  &lt;p&gt;Take = {{Take }}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.Get = {firstName:'Suman',middleName:' kumar',lastName:'sharma'};
+    $scope.reset = function() {
+        $scope.user = angular.copy($scope.Get);
+    
+    };
+    $scope.reset();
+    $scope.submit = function() {
+        $scope.user = angular.copy($scope.Get);
+    };
+    $scope.submit();
+});
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+  &lt;form onvalidate&gt;
+    First Name:&lt;/br&gt;
+    &lt;input type="text" ng-model="user.firstName"&gt;&lt;/br&gt;
+    Last Name:&lt;/br&gt;
+    &lt;input type="text" ng-model="user.middleName"&gt;&lt;/br&gt;
+     Last Name:&lt;/br&gt;
+    &lt;input type="text" ng-model="user.lastName"&gt;
+    &lt;br&gt;&lt;br&gt;    
+    &lt;button ng-click="reset()"&gt;Reset&lt;/button&gt;
+    &lt;button ng-click="submit()"&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;p&gt;Form = {{user}}&lt;/p&gt;
+  &lt;p&gt;Receipt = {{user}}&lt;/p&gt;
+  &lt;p&gt;Get = {{user}}&lt;/p&gt;
+  &lt;p&gt;Take = {{Take }}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.Get = {firstName:'Suman',middleName:' kumar',lastName:'sharma'};
+    $scope.reset = function() {
+        $scope.user = angular.copy($scope.Get);
+    
+    };
+    $scope.reset();
+    $scope.submit = function() {
+        $scope.user = angular.copy($scope.Get);
+    };
+    $scope.submit();
+});
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+				</div><!--/"panel-body-->
+			</div><!--Span9 End --->
+			<!--/ End Right Section  -->
+		</div><!--/row End 2---->
+        <!-- End Right Section  -->
+    </div> <!-- End Main Content -->
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12"><p>Created by Cotocus</p></div>                
+            </div><!--/row End 3-->
+        </div><!---/container End-->
+    </footer>
+    <!-- End Footer -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="../assets/js/prettyCheckable.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    
+  </body>
+
+<!-- Mirrored from wbpreview.com/previews/WB03K48SB/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Dec 2016 09:48:51 GMT -->
+</html>
