@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <title>AngularJS Directives |AngularJS Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Include Stylesheets -->
+
+	<link href="../assets/css/bootstrap.css" rel="stylesheet">
+	<link href="../assets/css/app.css" rel="stylesheet">
+	<link href="../assets/css/animate.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+	<link href="../assets/css/prettyCheckable.css" rel="stylesheet">
+	<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.html">
+    <link rel="shortcut icon" href="assets/ico/favicon.html">
+    </head>
+    <body>
+    <!-- Start Header/Navbar  -->
+    <div  class="navbar navbar-static-top">
+        <div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="../index.html">AngularJS Tutorial</a>
+			</div><!--Container end-->
+        </div><!---/navbar iner end-->
+    </div>
+    <!-- End Header/Navbar-->
+    <!-- Start Main Content  -->
+    <div class="container">        
+		<div class="row">
+		    <div class="span3">
+				<div class="sidebar-nav">
+					<div class="base">
+						<ul class="nav nav-list">
+							<li>
+							    <a class="btn-default" href="../index.html"><h3>AngularJS Tutorial</h3></a>
+						    </li>
+							<li><a href="../index.html">AngularJS - Home</a></li>
+							<li><a href="../angularjs/angularjs-expressions.html">AngularJS - Expressions</a></li>
+							<li><a href="../angularjs/angularjs-modules.html">AngularJS - Modules</a></li>
+							<li class="active"><a href="angularjs-directives.html">AngularJS - Directives</a></li>
+							<li><a href="../angularjs/angularjs-model.html">AngularJS - Model</a></li>
+							<li><a href="../angularjs/angularjs-forms.html">AngularJS - Forms</a></li>
+						    <li><a href="../angularjs/angularjs-data-binding.html">AngularJS - Data Binding</a></li>
+							<li><a href="../angularjs/angularjs-controllers.html">AngularJS - Controllers</a></li>
+							<li><a href="../angularjs/angularjs-scopes.html">AngularJS - Scopes</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-filters.html">AngularJS - Filters</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+						</ul><!--/nav nav-list End-->
+					</div><!---/base End-->
+				</div><!-- /End  Sidebar-Nav  -->
+			</div> <!-- /End span 3  -->
+		    <!-- End Left Sidebar  -->
+		    <!-- Start Right Section  -->
+		    <div class="span9">
+			    <h2 class="page-header"><a href="angularjs-directives.html">AngularJS Directives</a></h2>
+				<div class="panel-body well text-justify" style="font-size:16px";>
+			        <p>AngularJS directives are used to extend HTML. These are special attributes starting with ng- prefix.</p>
+                    <p>AngularJS has a set of built-in directives which offers functionality to your applications.</p>
+					<p>The <strong>ng-app</strong> This directive starts an AngularJS Application. an AngularJS application.</p>
+
+					<p>The <strong>ng-init</strong> This directive initializes application data.</p>
+
+					<p>The <strong>ng-model</strong> This directive binds the value of HTML controls (input, select, textarea) to application data.</p>												
+                    <p>The <strong>ng-repeat − </strong> This directive repeats html elements for each item in a collection.</p>
+					<p class="lead">Example</p>					
+					<pre style="font-size:15px";>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="" ng-init="firstName='Dineshwar'"&gt;
+
+&lt;p&gt;Input something in the input box:&lt;/p&gt;
+&lt;p&gt;FirstName: &lt;input type="text" ng-model="firstName"&gt;&lt;/p&gt;
+&lt;p&gt;You first name: {{ firstName }}&lt;/p&gt;
+
+&lt;p ng-init="middleName='Kumar'"&gt;MiddleName: &lt;input type="text" ng-model="middleName"&gt;&lt;/p&gt;
+
+&lt;p&gt;You "middle name: {{ middleName }}&lt;/p&gt;
+
+&lt;p ng-init="lastName='Paswan'"&gt;LastName: &lt;input type="text" ng-model="lastName"&gt;&lt;/p&gt;
+
+&lt;p&gt;You lastt name: {{ lastName }}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+					
+					<!DOCTYPE html>
+					<html>
+					    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+						<body>
+							<h3 class="page-header">Output:</h3>
+							<div ng-app="" ng-init="firstName='Dineshwar'">
+
+							<p>Input something in the input box:</p>
+							<p>FirstName: <input type="text" ng-model="firstName"></p>
+							<p>You first name: {{ firstName }}</p>
+
+							<p ng-init="middleName='Kumar'">MiddleName: <input type="text" ng-model="middleName"></p>
+
+							<p>You "middle name: {{ middleName }}</p>
+
+							<p ng-init="lastName='Paswan'">LastName: <input type="text" ng-model="lastName"></p>
+
+							<p>You lastt name: {{ lastName }}</p>
+							</div>
+
+						</body>
+					</html>
+					<p class="lead">Data Binding</p>
+					<p>The <strong>{{ firstName }}</strong> expression, in the example.Data binding in AngularJS binds AngularJS expressions with AngularJS data.</p>
+					<p>{{ firstName }} is bound with ng-model="firstName".</p>
+					<p>Example four text fields are bound together with four ng-model directives:</p>
+					<pre style="font-size:15px";>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div data-ng-app="" data-ng-init="quantity=110;price=5;invest=350;lose=130"&gt;
+
+&lt;h2&gt;Cost Calculator&lt;/h2&gt;
+
+Quantity: &lt;input class="label" type="number" ng-model="quantity"&gt;
+Price: &lt;input class="label" type="number" ng-model="price"&gt;
+Invest:&lt;input class="label" type="number" ng-model="invest"&gt;
+Lose:&lt;input class="label" type="number" ng-model="lose"&gt;
+&lt;p&gt;&lt;b&gt;Total in dollar:&lt;/b&gt;{{quantity / price + invest- lose}}&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+					</pre>
+					<p class="lead">Repeating HTML Elements</p>
+					<p>The ng-repeat directive repeats an HTML element:</p>
+					<pre style="font-size:15px";>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="" ng-init="students=['Deepak is Best Boy','Harsh is Best Cricker','Tulshi is Best Actor','Rahim is Best Molana','Bipin is Best Officer','Rani is Best Dancer','Saweta is Best Teacher']"&gt;
+  &lt;p&gt;Looping with ng-repeat:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li ng-repeat="y in students"&gt;
+      {{ y }}
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                <p>The <strong>ng-repeat</strong> directive actually <strong>clones HTML elements</strong> once for each item in a collection.</p>
+				<p>The <strong>ng-repeat</strong> directive used <strong>on an array of objects:</strong></p>
+				<pre style="font-size:15px";>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="" ng-init="names=[{city:'Ranch',stat:'in Jharkhand'},
+{city:'Patna',stat:'in Bihar'},
+{city:'New Delhi',stat:'in Delhi'}]"&gt;
+
+&lt;p&gt;Looping with objects:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li ng-repeat="x in names"&gt;
+  {{ x.city + ', ' + x.stat}}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+				</div><!--/"panel-body-->
+			</div><!--Span9 End --->
+			<!--/ End Right Section  -->
+		</div><!--/row End 2---->
+        <!-- End Right Section  -->
+    </div> <!-- End Main Content -->
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12"><p>Created by Cotocus</p></div>                
+            </div><!--/row End 3-->
+        </div><!---/container End-->
+    </footer>
+    <!-- End Footer -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="../assets/js/prettyCheckable.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    
+  </body>
+
+<!-- Mirrored from wbpreview.com/previews/WB03K48SB/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Dec 2016 09:48:51 GMT -->
+</html>

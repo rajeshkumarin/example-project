@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <title>AngularJS Model |AngularJS Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Include Stylesheets -->
+
+	<link href="../assets/css/bootstrap.css" rel="stylesheet">
+	<link href="../assets/css/app.css" rel="stylesheet">
+	<link href="../assets/css/animate.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+	<link href="../assets/css/prettyCheckable.css" rel="stylesheet">
+	<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.html">
+    <link rel="shortcut icon" href="assets/ico/favicon.html">
+    </head>
+    <body>
+    <!-- Start Header/Navbar  -->
+    <div  class="navbar navbar-static-top">
+        <div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="../index.html">AngularJS Tutorial</a>
+			</div><!--Container end-->
+        </div><!---/navbar iner end-->
+    </div>
+    <!-- End Header/Navbar-->
+    <!-- Start Main Content  -->
+    <div class="container">        
+		<div class="row">
+		    <div class="span3">
+				<div class="sidebar-nav">
+					<div class="base">
+						<ul class="nav nav-list">
+							<li>
+							    <a class="btn-default" href="../index.html"><h3>AngularJS Tutorial</h3></a>
+						    </li>
+							<li><a href="../index.html">AngularJS - Home</a></li>
+							<li><a href="../angularjs/angularjs-expressions.html">AngularJS - Expressions</a></li>
+							<li><a href="../angularjs/angularjs-modules.html">AngularJS - Modules</a></li>
+							<li><a href="../angularjs/angularjs-directives.html">AngularJS - Directives</a></li>
+							<li class="active"><a href="angularjs-model.html">AngularJS - Model</a></li>
+							<li><a href="../angularjs/angularjs-forms.html">AngularJS - Forms</a></li>
+						    <li><a href="../angularjs/angularjs-data-binding.html">AngularJS - Data Binding</a></li>
+							<li><a href="../angularjs/angularjs-controllers.html">AngularJS - Controllers</a></li>
+							<li><a href="../angularjs/angularjs-scopes.html">AngularJS - Scopes</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-filters.html">AngularJS - Filters</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+						</ul><!--/nav nav-list End-->
+					</div><!---/base End-->
+				</div><!-- /End  Sidebar-Nav  -->
+			</div> <!-- /End span 3  -->
+		    <!-- End Left Sidebar  -->
+		    <!-- Start Right Section  -->
+		    <div class="span9">
+			    <h2 class="page-header"><a href="angularjs-model.html">AngularJS Model</a></h2>
+				<div class="panel-body text-justify well" style="font-size:16px";>
+			        <p>The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.</p>                    											     
+					<p class="lead">The ng-model Directive</p>
+					<p>With the<strong> ng-model</strong> directive you can bind the value of an input field to a variable created in AngularJS..</p>
+					<pre style="font-size:15px";>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+Name: &lt;input ng-model="computer"&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.computer = "zoome computer";
+});
+&lt;/script&gt;
+
+&lt;p&gt;Use the ng-model directive to bind the value of the input field to a property made in the controller.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>					
+					<p class="lead">Two-Way Binding</p>
+					<p>The binding goes both ways. If the user changes the value inside the input field, the AngularJS property will also change its value:</p>
+					
+					<p>Example four text fields are bound together with four ng-model directives:</p>
+					<pre style="font-size:15px";>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+Name:&lt;input ng-model="name"&gt;
+&lt;p&gt;&lt;b&gt;This is great contory:&lt;/b&gt;-&lt;span ng-bind="name"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;script&gt;
+var app = angular.module('myApp',[]);
+app.controller('myCtrl', function($scope) { $scope.name = "I love india";});
+&lt;/script&gt;
+
+&lt;p&gt;Use the ng-model directive to bind the value of the input field to a property made in the controller.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>					
+					<p class="lead">Validate User Input</p>
+					<p>The <strong>ng-model</strong> directive can provide type validation for application data (number, e-mail, required):</p>
+					<p>The span will be displayed only if the expression in the <strong>ng-show</strong> attribute returns<strong> true.</strong></p>
+				   <pre style="font-size:15px";>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;form ng-app="" name="myForm"&gt;
+    Email:
+    &lt;input type="email" name="myAddress" ng-model="text"&gt;
+    &lt;span ng-show="myForm.myAddress.$error.email"&gt;Not a valid e-mail address&lt;/span&gt;
+&lt;/form&gt;
+
+&lt;p&gt;Enter your e-mail address in the input field. AngularJS will display an errormessage if the address is not an e-mail.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+					
+                    <!DOCTYPE html>
+					<html>
+					<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+					<body>
+                       <h4 class="page-header">You Can Check:</h4>
+					<form ng-app="" name="myForm">
+						Email:
+						<input type="email" name="myAddress" ng-model="text">
+						<span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+					</form>
+
+					<p>Enter your e-mail address in the input field. AngularJS will display an errormessage if the address is not an e-mail.</p>
+
+					</body>
+					</html>
+					<p class="lead">Application Status</p>
+					<p>The <strong>ng-model</strong> directive can provide status for application data (invalid, dirty, touched, error):</p>
+					<pre style="font-size:15px";>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;form ng-app="" name="myForm" ng-init="myText = 'rahulsinha.kumar@gmail.com'"&gt;
+
+Email:
+&lt;input type="email" name="myAddress" ng-model="myText" required&gt;
+&lt;p&gt;Edit the e-mail address, and try to change the status.&lt;/p&gt;
+&lt;h1 style="color:red"&gt;Status&lt;/h1&gt;
+&lt;p&gt;Valid: {{myForm.myAddress.$valid}}(dineshwarpaswan3@gmail.com).&lt;/p&gt;
+&lt;p&gt;Dirty: {{myForm.myAddress.$dirty}}&lt;/p&gt;
+&lt;p&gt;Touched: {{myForm.myAddress.$touched}}&lt;/p&gt;
+&lt;p&gt;empty: {{myForm.myAddress.$empty}}(This is no data in box)&lt;/p&gt;
+&lt;p&gt;untouched: {{myForm.myAddress.$untouched}}&lt;/p&gt;
+&lt;p&gt;invalid: {{myForm.myAddress.$invalid}}(DineshwarPaswan@gmail.com)&lt;/p&gt;
+&lt;p&gt;ng-pending: {{myForm.myAddress.$ng-pending}}&lt;/p&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+				</div><!--/"panel-body-->
+			</div><!--Span9 End --->
+			<!--/ End Right Section  -->
+		</div><!--/row End 2---->
+        <!-- End Right Section  -->
+    </div> <!-- End Main Content -->
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12"><p>Created by Cotocus</p></div>                
+            </div><!--/row End 3-->
+        </div><!---/container End-->
+    </footer>
+    <!-- End Footer -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="../assets/js/prettyCheckable.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    
+  </body>
+
+<!-- Mirrored from wbpreview.com/previews/WB03K48SB/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Dec 2016 09:48:51 GMT -->
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <title>AngularJS Expressions | AngularJS Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Include Stylesheets -->
+
+	<link href="../assets/css/bootstrap.css" rel="stylesheet">
+	<link href="../assets/css/app.css" rel="stylesheet">
+	<link href="../assets/css/animate.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+	<link href="../assets/css/prettyCheckable.css" rel="stylesheet">
+	<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.html">
+    <link rel="shortcut icon" href="assets/ico/favicon.html">
+    </head>
+    <body>
+    <!-- Start Header/Navbar  -->
+    <div  class="navbar navbar-static-top">
+        <div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="../index.html">AngularJS Tutorial</a>
+			</div><!--Container end-->
+        </div><!---/navbar iner end-->
+    </div>
+    <!-- End Header/Navbar-->
+    <!-- Start Main Content  -->
+    <div class="container">        
+		<div class="row">
+		    <div class="span3">
+				<div class="sidebar-nav">
+					<div class="base">
+						<ul class="nav nav-list">
+							<li>
+							    <a class="btn-default" href="../index.html"><h3>AngularJS Tutorial</h3></a>
+						    </li>
+							<li><a href="../index.html">AngularJS - Home</a></li>
+							<li  class="active"><a href="angularjs-expressions.html">AngularJS - Expressions</a></li>
+							<li><a href="../angularjs/angularjs-modules.html">AngularJS - Modules</a></li>
+							<li><a href="../angularjs/angularjs-directives.html">AngularJS - Directives</a></li>
+							<li><a href="../angularjs/angularjs-model.html">AngularJS - Model</a></li>
+							<li><a href="../angularjs/angularjs-forms.html">AngularJS - Forms</a></li>
+						    <li><a href="../angularjs/angularjs-data-binding.html">AngularJS - Data Binding</a></li>
+							<li><a href="../angularjs/angularjs-controllers.html">AngularJS - Controllers</a></li>
+							<li><a href="../angularjs/angularjs-scopes.html">AngularJS - Scopes</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-filters.html">AngularJS - Filters</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+						</ul><!--/nav nav-list End-->
+					</div><!---/base End-->
+				</div><!-- /End  Sidebar-Nav  -->
+			</div> <!-- /End span 3  -->
+		    <!-- End Left Sidebar  -->
+		    <!-- Start Right Section  -->
+		    <div class="span9">
+			    <h2 class="page-header"><a href="angularjs-expressions.html">AngularJS Expressions</a></h2>
+				<div class="panel-body well text-justify" style="font-size:16px";>
+			        <p><strong>Expressions</strong> are used to bind application data to html. Expressions are written inside double braces like:- <strong>{{ expression}}.</strong></p>
+					<p>AngularJS expressions can also be written inside a directive:<strong> ng-bind="expression".</strong></p>
+					<p>AngularJS expressions are much like <strong>JavaScript expressions:</strong><p>
+					<p> They can contain literals, operators, and variables.
+
+                    Example {{ 5 + 5 }} or {{ firstName + " " + lastName }}</p>
+					<p class="lead">Using numbers</p>
+					<p>A number is a mathematical object used to count, measure, and label. The original examples are the natural numbers 1, 2, 3,</p>
+					<pre style="font-size:15px";>&lt;p&gt;Expense on Books : {{cost * quantity}} Rs&lt;/p&gt;</pre>
+					<p class="lead">Using strings</p>
+					<p>String is a  sequence of symbols or values, such as a character string (a sequence of characters) or a binary digit string (a sequence of binary values).</p>
+					<pre style="font-size:15px";>&lt;p&gt;Hello {{student.firstname + " " + student.lastname}}!&lt;/p&gt;</pre>
+					<p class="lead">Using object</p>
+					<p>Many examples of real-world <strong>objects:</strong> your dog, your desk, your television set, your bicycle</p>
+					<p>Real-world objects share two <strong>characteristics:</strong>They all have state and behavior. Dogs have <strong>state</strong> (name, color, breed, hungry) and <strong>behavior</strong> (barking, fetching, wagging tail). Bicycles also have <strong>state </strong>(current gear, current pedal cadence, current speed) and <strong>behavior</strong> (changing gear, changing pedal cadence, applying brakes).</p>
+					<pre style="font-size:15px";>&lt;p&gt;Roll No: {{student.rollno}}&lt;/p&gt;</pre>
+					
+					<p class="lead">Using array</p>
+					<p>An array is a data structure that contains a group of elements.such as an integer or string. <p>
+					<p>For example, a search engine may use an array to store Web pages found in a search performed by the user.</p>
+					<pre style="font-size:15px";>&lt;p&gt;Marks(Math): {{marks[3]}}&lt;/p&gt;</pre>
+					<pre style="font-size:15px";> 
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;    
+&lt;body&gt;
+	    
+&lt;h4&gt;Sample Application&lt;/h4&gt;
+&lt;div ng-app = "" ng-init = "quantity = 6;cost = 15; student = {firstname:'Dineshwar',lastname:'paswan',rollno:'42'};rollno={sectionA:'3',sectionB:'10',sectionC:'16'};marks = [90,75,68,73,80,48,32,]"&gt;								
+&lt;p&gt;Expense on Books : Rs.{{ quantity * cost}} &lt;/p&gt;
+&lt;p&gt;Hello {{student.firstname + " " + student.lastname}}!&lt;/p&gt;
+	&lt;h5&gt;FirstName {{student.firstname}}&lt;/h5&gt;
+	&lt;h5&gt;LastName {{student.lastname}}&lt;/h5&gt;
+	&lt;p&gt;Roll No:- {{student.rollno}}&lt;/p&gt;
+	&lt;p&gt;All section:-{{rollno.sectionA +" "+ rollno.sectionB +" "+ rollno.sectionC}}&lt;/P&gt;
+	&lt;p&gt;SectionA:-{{rollno.sectionA}}&lt;/p&gt;
+	&lt;p&gt;SectionB:-{{rollno.sectionB}}&lt;/p&gt;
+	&lt;p&gt;SectionC:-{{rollno.sectionC}}&lt;/p&gt;
+	&lt;p&gt;Marks(Math):- {{marks[4]}}&lt;/p&gt;
+	&lt;p&gt;Marks(Math):- {{marks[0]}}&lt;/p&gt;
+	&lt;p&gt;Marks(Math):- {{marks[2]}}&lt;/p&gt;
+	&lt;/div&gt;					  							  							  
+&lt;script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+				        <html>
+   
+						   <head>
+							  <title>AngularJS Expressions</title>
+						   </head>
+						   
+						    <body>
+							    <h3 class="page-header">Output:</h3>
+							  <h4>Sample Application</h4>
+							  
+							  <div ng-app = "" ng-init = "quantity = 6;cost = 15; student = {firstname:'Dineshwar',lastname:'paswan',rollno:'42'};rollno={sectionA:'3',sectionB:'10',sectionC:'16'};marks = [90,75,68,73,80,48,32,]">
+								
+								 <p>Expense on Books : Rs.{{ quantity * cost}} </p>
+								  <p>Hello {{student.firstname + " " + student.lastname}}!</p>
+								  <h5>FirstName {{student.firstname}}</h5>
+								  <h5>LastName {{student.lastname}}</h5>
+								 <p>Roll No:- {{student.rollno}}</p>
+								 <p>All section:-{{rollno.sectionA +" "+ rollno.sectionB +" "+ rollno.sectionC}}</P>
+								 <p>SectionA:-{{rollno.sectionA}}</p>
+								 <p>SectionB:-{{rollno.sectionB}}</p>
+								 <p>SectionC:-{{rollno.sectionC}}</p>
+								 <p>Marks(Math):- {{marks[4]}}</p>
+								 <p>Marks(Math):- {{marks[0]}}</p>
+								 <p>Marks(Math):- {{marks[2]}}</p>
+							  </div>
+							  
+							  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+							  
+						    </body>
+						</html>
+
+				</div><!--/"panel-body-->
+			</div><!--Span9 End --->
+			<!--/ End Right Section  -->
+		</div><!--/row End 2---->
+        <!-- End Right Section  -->
+    </div> <!-- End Main Content -->
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12"><p>Created by Cotocus</p></div>                
+            </div><!--/row End 3-->
+        </div><!---/container End-->
+    </footer>
+    <!-- End Footer -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="../assets/js/prettyCheckable.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    
+  </body>
+
+<!-- Mirrored from wbpreview.com/previews/WB03K48SB/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Dec 2016 09:48:51 GMT -->
+</html>

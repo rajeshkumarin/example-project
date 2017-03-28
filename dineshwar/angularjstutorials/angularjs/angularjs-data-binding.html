@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <title>AngularJS Data Binding |AngularJS Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Include Stylesheets -->
+
+	<link href="../assets/css/bootstrap.css" rel="stylesheet">
+	<link href="../assets/css/app.css" rel="stylesheet">
+	<link href="../assets/css/animate.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+	<link href="../assets/css/prettyCheckable.css" rel="stylesheet">
+	<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.html">
+    <link rel="shortcut icon" href="assets/ico/favicon.html">
+    </head>
+    <body>
+    <!-- Start Header/Navbar  -->
+    <div  class="navbar navbar-static-top">
+        <div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="../index.html">AngularJS Tutorial</a>
+			</div><!--Container end-->
+        </div><!---/navbar iner end-->
+    </div>
+    <!-- End Header/Navbar-->
+    <!-- Start Main Content  -->
+    <div class="container">        
+		<div class="row">
+		    <div class="span3">
+				<div class="sidebar-nav">
+					<div class="base">
+						<ul class="nav nav-list">
+							<li>
+							    <a class="btn-default" href="../index.html"><h3>AngularJS Tutorial</h3></a>
+						    </li>
+							<li><a href="../index.html">AngularJS - Home</a></li>
+							<li><a href="../angularjs/angularjs-expressions.html">AngularJS - Expressions</a></li>
+							<li><a href="../angularjs/angularjs-modules.html">AngularJS - Modules</a></li>
+							<li><a href="../angularjs/angularjs-directives.html">AngularJS - Directives</a></li>
+							<li><a href="../angularjs/angularjs-model.html">AngularJS - Model</a></li>
+							<li><a href="../angularjs/angularjs-forms.html">AngularJS - Forms</a></li>
+						    <li class="active"><a href="angularjs-data-binding.html">AngularJS - Data Binding</a></li>
+							<li><a href="../angularjs/angularjs-controllers.html">AngularJS - Controllers</a></li>
+							<li><a href="../angularjs/angularjs-scopes.html">AngularJS - Scopes</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-filters.html">AngularJS - Filters</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li>
+							    <a href="../angularjs/angularjs-.html">
+								    AngularJS
+								</a>
+							</li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+							<li><a href="../angularjs/angularjs-.html">AngularJS</a></li>
+						</ul><!--/nav nav-list End-->
+					</div><!---/base End-->
+				</div><!-- /End  Sidebar-Nav  -->
+			</div> <!-- /End span 3  -->
+		    <!-- End Left Sidebar  -->
+		    <!-- Start Right Section  -->
+		    <div class="span9">
+			    <h2 class="page-header"><a href="angularjs-data-binding.html">AngularJS Data Binding</a></h2>
+				<div class="panel-body well text-justify" style="font-size:16px";>
+			        <p>Data binding is the automatic synchronization of data between model and view components.</p>
+					<p class="lead">Data Model</p>
+					<p>The data model is a collection of data available for the application.</p>
+					<p>AngularJS applications usually have a data model.</p>
+					<pre style="font-size:15px";>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+    &lt;p ng-bind="firstname"&gt;&lt;/p&gt;
+    &lt;p ng-bind="lastname"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstname = "Puja";
+    $scope.lastname = "Agrawal";
+  
+});
+&lt;/script&gt;
+
+&lt;p&gt;Use the ng-bind directive to bind the innerHTML of an element to a property in the data model.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+					
+				    <p class="lead">HTML View</p>
+					<p>The view has access to the model, and there are several ways of displaying model data in the view.</p>
+					<p>You can use the <strong>ng-bind</strong> directive, which will bind the innerHTML of the element to the specified model property:</p>
+                    <pre style="font-size:15px";>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+    &lt;p&gt;&lt;strong&gt;It's FullName: &lt;/strong&gt;&lt;span ng-bind="fullname"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.fullname ="Abhay Kumar Paswan"
+    $scope.firstname = "Abhay";
+    $scope.lastname = " Kumar";
+    $scope.lastname = " Paswanr"; 
+});
+&lt;/script&gt;
+
+&lt;p&gt;Use the ng-bind directive to bind the innerHTML of an element to a property in the data model.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+					</pre>
+					<p>You can also use double braces<strong> {{ }} </strong>to display content from the model:</p>
+					<pre style="font-size:15px";>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+    &lt;p&gt;First Name: &lt;strong&gt;{{firstname}}&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;Middle Name: &lt;strong&gt;{{middlename}}&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;Last Name:&lt;strong&gt;{{lastname}}&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstname = "Rinku ";
+    $scope.middlename = "Varma";
+     $scope.lastname = "Parshad";
+});
+&lt;/script&gt;
+
+&lt;p&gt;You can use double braces to display content from the data model.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+					<p class="lead">The ng-model Directive</p>
+					<p>Use the <strong>ng-model</strong> directive to bind data from the model to the view on HTML controls (input, select, textarea)</p>
+					<pre style="font-size:15px";>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+    
+    &lt;input ng-model="firstname"&gt;
+    &lt;p&gt;&lt;b&gt;FirstName:&lt;/b&gt; {{firstname}}&lt;/p&gt;&lt;br&gt;
+    
+    &lt;input type="text" ng-model="lastname"&gt;
+    &lt;p&gt;&lt;b&gt;LastName:&lt;/b&gt;{{lastname}}&lt;/p&gt;&lt;br&gt;
+    
+    &lt;input ng-model="fullname"&gt;
+    &lt;p&gt;&lt;b&gt;FullName:&lt;/b&gt; {{fullname}}&lt;/p&gt;
+    
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.fullname = "Ravindara kumar";
+    $scope.firstname = "Ravindara";
+    $scope.lastname = "kumar";    
+});
+&lt;/script&gt;
+
+&lt;p&gt;Use the ng-model directive on HTML controls (input, select, textarea) to bind data between the view and the data model.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+					<p class="lead">AngularJS Controller</p>
+					<p>Applications in AngularJS are controlled by controllers. 
+					<p>Because the controller can be completely separated from the view, and simply concentrate on the model data. 
+					<p>The view will reflect any changes made in the controller.</p>
+					</p>
+					<pre style="font-size:15px";>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app="myApp" ng-controller="myCtrl"&gt;
+    Name: &lt;input ng-model="firstname"&gt;
+    &lt;h1 ng-click="changeName()"&gt;Its Name: {{firstname}}&lt;/h1&gt;
+
+&lt;/div&gt;
+&lt;script&gt;
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+          $scope.firstname = "Dineshwar";      
+         $scope.changeName = function() {$scope.firstname = "Rahul";}
+     
+});
+&lt;/script&gt;
+
+&lt;p&gt;Click on the header to run the "changeName" function.&lt;/p&gt;
+
+&lt;p&gt;This example demonstrates how to use the controller to change model data.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+					</pre>
+				</div><!--/"panel-body-->
+			</div><!--Span9 End --->
+			<!--/ End Right Section  -->
+		</div><!--/row End 2---->
+        <!-- End Right Section  -->
+    </div> <!-- End Main Content -->
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span12"><p>Created by Cotocus</p></div>                
+            </div><!--/row End 3-->
+        </div><!---/container End-->
+    </footer>
+    <!-- End Footer -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="../assets/js/prettyCheckable.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    
+  </body>
+
+<!-- Mirrored from wbpreview.com/previews/WB03K48SB/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Dec 2016 09:48:51 GMT -->
+</html>
