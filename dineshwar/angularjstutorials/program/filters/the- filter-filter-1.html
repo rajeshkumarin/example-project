@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="courcesCtrl">
+
+
+  <ul><li ng-repeat="x in cources | filter : 'b'">
+    {{ x }}
+  </li>
+  </ul>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('courcesCtrl', function($scope) {
+    $scope.cources = [
+           'B.Tech',
+	       'M.Tech',
+		   'BBA',
+		   'MBA',
+		   'BCA',
+		   'MCA',
+		   'LLB',
+		   'BA',
+		   'MA',
+		   'BAC',
+		   'MAC',
+		   'BCOM',
+		   'MCOM',
+    ];
+});
+</script>
+
+<p>This example displays only the cources containing the letter "b".</p>
+
+</body>
+</html>
