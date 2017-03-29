@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="coursesCtrl">
+  <p> You Can <b>Search</b> of Cource: <input type="text" ng-model="test"></p>
+
+  <p ng-repeat="x in courses | filter:test">
+    {{ x }}
+  </p>
+  
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('coursesCtrl', function($scope) {
+    $scope.courses = [
+           'B.Tech',
+	       'M.Tech',
+		   'BBA',
+		   'MBA',
+		   'BCA',
+		   'MCA',
+		   'LLB',
+		   'BA',
+		   'MA',
+		   'BAC',
+		   'MAC',
+		   'BCOM',
+		   'MCOM',
+		   'Matric',
+		   'Inter Mediate',
+		   'DCA',
+		   'ADCA',
+		   'Tailly',
+		   'Typing',
+		   'MBBS',
+		   'Diploma',
+		   'ITI',
+		   'BAD',
+		   'PHD',
+		   
+		   
+    ];
+});
+</script>
+
+<p>This example displays only the cources containing the letter "test".</p>
+
+</body>
+</html>
