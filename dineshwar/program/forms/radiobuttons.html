@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="">
+
+<form>
+  Pick a topic:
+  <input type="radio" ng-model="myVar" value="dogs">Dogs
+  <input type="radio" ng-model="myVar" value="tuts">Tutorials
+  <input type="radio" ng-model="myVar" value="cars">Cars
+  <input type="radio" ng-model="myVar" value="mobiles">Mobiles
+  <input type="radio" ng-model="myVar" value="laptops">Laptops
+  <input type="radio" ng-model="myVar" value="contory">Contory
+  <input type="radio" ng-model="myVar" value="states">States
+  <input type="radio" ng-model="myVar" value="citys">Citys
+  
+</form>
+
+<div ng-switch="myVar">
+  <div ng-switch-when="dogs">
+     <h1>Dogs</h1>
+     <p>Welcome to a world of dogs.</p>
+  </div>
+  <div ng-switch-when="tuts">
+     <h1>Tutorials</h1>
+     <p>Learn from examples.</p>
+  </div>
+  <div ng-switch-when="cars">
+     <h1>Audi</h1>
+     <p>Read about cars.</p>  
+  </div>
+  <div ng-switch-when="mobiles">
+     <h1>Summung</h1>
+  </div>
+  <div ng-switch-when="laptops">
+     <h1>Apple</h1>
+  </div>
+  <div ng-switch-when="contory">
+     <h1>India</h1>
+  </div>
+  <div ng-switch-when="states">
+     <h1>Bihar</h1>
+  </div>
+  <div ng-switch-when="citys">
+     <h1>Ptana</h1>
+  </div>
+</div>
+
+<p>The ng-switch directive hides and shows HTML sections depending on the value of the radio buttons.</p>
+
+</body>
+</html>

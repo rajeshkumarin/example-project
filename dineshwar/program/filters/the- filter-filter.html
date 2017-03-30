@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="carsCtrl">
+
+
+  <p ng-repeat="x in cars | filter:'i'">
+    {{ x }}
+  </p>
+
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('carsCtrl', function($scope) {
+    $scope.cars = [
+        'Audi',
+        'BMW',
+        'Suziki',
+        'Honda City',
+        'Mahindra',
+        'Safari',
+        'Allto',
+        'Suziki xzen',
+        'Tata',
+    ];
+});
+</script>
+
+<p>This example displays only the cars containing the letter "i".</p>
+
+</body>
+</html>

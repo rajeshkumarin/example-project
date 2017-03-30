@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<h1>{{carname +" "+ carcol +" "+ carmodule}}</h1>
+<p>It's Car Name: <strong>{{carname}}</strong></p>
+<p>It's Col Name: <strong>{{carcol}}</strong></p>
+<p>It's Mdl Name: <strong>{{carmodule}}</strong></p>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.carname = "Volvo";
+     $scope.carcol = "Gray";
+      $scope.carmodule = "Vc15er";
+});
+</script>
+
+<p>The property "carname" was made in the controller, and can be referred to in the view by using the {{ }} brackets.</p>
+
+</body>
+</html>

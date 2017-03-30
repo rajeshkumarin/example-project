@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+  <form>
+    Check to show a pragraph:
+    <input type="checkbox" ng-model="myVar">
+  </form>
+  <p ng-show="myVar">This is My Pragraph.</p>
+  <form>
+    Check to show a pragraph:
+    <input type="checkbox" ng-model="myCar">
+  </form>
+  <p ng-show="myCar">My Car name is hunda city.</p>
+  <form>
+    Check to show a pragraph:
+    <input type="checkbox" ng-model="myMob">
+  </form>
+  <p ng-show="myMob">My Mob name is nokia.</p>
+  <form>
+    Check to show a header:
+    <input type="checkbox" ng-model="myLaptop">
+  </form>
+  <h3 ng-show="myLaptop">My Lap name is sony.</h3>
+</div>
+
+<p>The header's ng-show attribute is set to true when the checkbox is checked.</p>
+
+</body>
+</html>

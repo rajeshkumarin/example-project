@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="">
+                    
+<form>
+Select a Branch of Course:
+	<select ng-model="myVar">
+	    <option value="cse">CSE
+	    <option value="ece">ECE
+        <option value="eee">EEE
+	    <option value="mec">MEC						
+    </select>
+</form>
+
+<div ng-switch="myVar">
+		<div ng-switch-when="cse">
+			<h1>CSE</h1>
+			<p>Read about CSE.</p>
+		</div>
+		<div ng-switch-when="ece">
+			<h1>ECE</h1>
+			<p>Read about ECE.</p>
+		</div>
+		<div ng-switch-when="eee">
+			<h1>EEE</h1>
+			<p>Read about EEE.</p>
+		</div>
+		<div ng-switch-when="mec">
+			<h1>MEC</h1>
+			<p>Read about MEC.</p>
+		</div>  
+</div>
+<p>The ng-switch directive hides and shows HTML sections depending on the value of the dropdown list.</p>
+</body>
+</html>

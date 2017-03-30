@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="employeeCtrl">
+ <table border = "0">
+      
+	<tr><td>The <b>Compny</b> Name:</td> <td><input type="text" ng-model="compnyname"></td></tr>
+	<tr><td>Emp <b>Position</b> Name:</td><td>  <input type="text" ng-model="positionname"><td></tr>
+	<tr><td>First <b>Emp</b> Name:</td><td>  <input type="text" ng-model="fistname"><td></tr>
+	<tr><td>Middle <b>Emp</b> Name:</td> <td> <input type="text" ng-model="middlename"><td></tr>
+	<tr><td>Last <b>Emp</b> Name:</td><td>    <input type="text" ng-model="lastname"><td></tr>
+	<tr><td>Sallary <b>In</b> Digit:</td><td><input type="digit" ng-model="fee"><td></tr>
+	<tr><td> Your <b>Compny</b> Name:</td><td> <b>{{compnyname | uppercase}}</b><td></tr>
+	<tr><td>Your <b>Position</b> Name:</td><td> <b>{{positionname | uppercase}}</b><td></tr>
+	<tr><td> Its <b>Full</b> Emp Name:</td><td> <b>{{fullname()|uppercase}}</b><td></tr>
+	<tr><td><b>Employee</b> Sallary :</td><td><b> {{  fee | currency }}</b><td></tr>
+</table>
+</div>
+
+<script>
+angular.module('myApp', []).controller('employeeCtrl', function($scope) { 
+$scope.fee = 35900;
+$scope.compnyname = "Cotocus";
+$scope.positionname = "Marketin Engineer";
+$scope.fistname = "Sabir";
+$scope.middlename = "Kalam";
+$scope.lastname = "Khan";
+$scope.fullname = function(){ return $scope.fistname+" "+ $scope.middlename+" "+$scope.lastname;};
+});
+</script>
+
+</body>
+</html>
