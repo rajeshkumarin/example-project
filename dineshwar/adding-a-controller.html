@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+{{ firstName + " has  money:- " + " " + A + " " + middleName +" has low balance:- " + " " + B + " " + lastName + " has handsome moey:- " + " "+ C}}
+</div>
+
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "DINESHWAR";
+    $scope.middleName = "KUMAR";
+     $scope.lastName = "PASWAN";
+      $scope.A = "150000";
+      $scope.B = "10000";
+      $scope.C = "110000";
+});
+</script>
+
+</body>
+</html>
