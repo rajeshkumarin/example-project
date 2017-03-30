@@ -1,0 +1,2 @@
+http://ngmodules.org/modules/pure-angular-advanced-searchbox
+http://xdesigns.net/2013/07/jquery-search-box/

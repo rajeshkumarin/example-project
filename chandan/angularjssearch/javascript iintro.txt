@@ -1,0 +1,65 @@
+What is Javascript?
+A Programming language that is used to make web pages interactive
+interpreted language
+Runs on the client's computer/Browser
+object based
+
+Javascript is Not Java !
+They have a similar name but are completely different
+Java is much more complex
+same category as C and C++
+Javascript is a "scripting" language
+
+Programming Fundamentals
+variables
+Comparisons & Operators
+Data Types
+Arrays
+Objects
+prototypes
+Loops 
+Functions
+Events
+Conditionals 
+Program Flow
+
+What do I need to run Javascript?
+All you need to run Javascript is a modern web browser
+Google Chrome
+Mozilla Firefox
+Safari
+Internet Explorer
+To create javascript, all you need is a text editor (Notepad, Sublime Text, Textmate, etc)
+
+HTML vs. Javascript
+They are completely differnt and they work together
+HTML is a markup language and Javascript is a programming language
+Javascript uses "events" and "actions" to make your page interactive
+Learn HTml first
+
+What Can I do with javascript?
+put content in an HTML page on the fly
+make webpages responsive
+Detect a Users Browser & other info
+Create Cookies
+Validate Forms
+Create Animations, Slideshows, Scrollers, etc.
+Build Apps with Javascript Frameworks (AngularJs, ReactJs, backbonejs, etc)
+
+
+Variable contains letters, numbers, undersocre, doller signs.
+begin with a letter
+start with _ or $
+Case Sensitive
+Camel case example --- myNumber
+Partial case ---- MyFavouriteNumber
+Underscore my_favourite_number
+
+Arrays
+Var colors = ['red', 'blue', 'green'];
+alert (colors);
+
+Arrays are zero based.
+
+Loops
+ 

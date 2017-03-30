@@ -1,0 +1,32 @@
+
+
+<head>
+
+	<script>
+	var table = $('#example').DataTable({
+    initComplete : function() {
+        var input = $('.dataTables_filter input').unbind(),
+            self = this.api(),
+            $searchButton = $('<button>')
+                       .text('search')
+                       .click(function() {
+                          self.search(input.val()).draw();
+                       }),
+            $clearButton = $('<button>')
+                       .text('clear')
+                       .click(function() {
+                          input.val('');
+                          $searchButton.click(); 
+                       }) 
+        $('.dataTables_filter').append($searchButton, $clearButton);
+    }            
+}) 
+	
+	</script>
+</head>
+<body>
+<input type="text" class="form-control" name="ItemID" id="ItemID" maxlength="15"> 
+<span class="input-group-btn">
+<button type="button" class="btn btn-default" id="Search">SEARCH</button>
+<button style="display:none;" type="button" class="btn btn-default" id="ESearch">EXIT SEARCH</button>
+</span>
